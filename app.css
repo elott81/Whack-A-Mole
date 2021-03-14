@@ -7,3 +7,7 @@ h1 {
     color: #663300;
     font-size: 4em;
 }
+
+.mole {
+    position: absolute;
+  }
