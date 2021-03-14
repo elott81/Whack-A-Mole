@@ -10,4 +10,10 @@ h1 {
 
 .mole {
     position: absolute;
+    z-index: 1;
   }
+
+.hole-bottom {
+    position: absolute;
+    z-index: 2;
+}
