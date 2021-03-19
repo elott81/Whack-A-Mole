@@ -46,6 +46,17 @@ h1 {
     transform: translateY(0px);
 }
 
+.pow {
+    display: none;
+    position: absolute;
+    transform: translateX(130px) translateY(-20px);
+    z-index: 3;
+}
+
+.hit {
+    display: initial;
+}
+
 .hole-bottom {
     position: absolute;
     z-index: 2;

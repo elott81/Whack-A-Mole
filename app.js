@@ -16,7 +16,7 @@ function animateMoles() {
                     setTimeout(function(){
                         // and then remove the classes
                         moles[rand].className = 'mole';
-                    }, 2001)
+                    }, 2500)
                 }, 2000)
             }
             animateMoles()
@@ -24,15 +24,17 @@ function animateMoles() {
     }
 
 // click event to 'Whack-a-Mole'
-const whackMole = function(){
-    this.children[1].classList.add('mole-animate-down');
-    setTimeout(function(){
-        this.children[1].className = 'mole';
-    }, 1)
-}
 
 for (let hole of holes){
-    hole.addEventListener('click', whackMole);
+    hole.addEventListener('click', function(){
+        if (hole.children[2].classList.contains('mole-animate-up')){
+            hole.children[0].style.display = 'initial';
+            hole.children[2].classList.add('mole-animate-down');
+            setTimeout(function(){
+                hole.children[0].style.display = 'none';
+            }, 300)
+        }
+    });
 }
 
 animateMoles();
