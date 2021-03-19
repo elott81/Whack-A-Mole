@@ -12,10 +12,20 @@ h1 {
     position: absolute;
 }
 
-@keyframes animation {
-    0%   {top:0px;}
-    50%  {top:-100px;}
-    100% {top:0px;}
+@keyframes animation-up {
+    from {
+        transform: translateY(0px);
+    } to {
+        transform: translateY(-100px);
+    }
+  }
+
+@keyframes animation-down {
+    from {
+        transform: translateY(-100px);
+    } to {
+        transform: translateY(0px);
+    }
   }
 
 .mole {
@@ -24,9 +34,16 @@ h1 {
     z-index: 1;
   }
 
-.mole-animate {
-    animation-name: animation;
-    animation-duration: 1s;
+.mole-animate-up {
+    animation-name: animation-up;
+    animation-duration: 0.3s;
+    transform: translateY(-100px);
+}
+
+.mole-animate-down {
+    animation-name: animation-down;
+    animation-duration: 0.3s;
+    transform: translateY(0px);
 }
 
 .hole-bottom {
