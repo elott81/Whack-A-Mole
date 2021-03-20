@@ -1,5 +1,7 @@
 const moles = document.querySelectorAll('.mole');
 const holes = document.querySelectorAll('.hole');
+const score = document.querySelector('#score')
+let count = 0;
 
 // Loop of mole animation
 function animateMoles() {
@@ -16,7 +18,7 @@ function animateMoles() {
                     setTimeout(function(){
                         // and then remove the classes
                         moles[rand].className = 'mole';
-                    }, 2500)
+                    }, 2001)
                 }, 2000)
             }
             animateMoles()
@@ -32,7 +34,9 @@ for (let hole of holes){
             hole.children[2].classList.add('mole-animate-down');
             setTimeout(function(){
                 hole.children[0].style.display = 'none';
-            }, 300)
+            }, 200)
+            count++;
+            score.textContent = count;
         }
     });
 }
