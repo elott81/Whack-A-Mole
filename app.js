@@ -6,19 +6,19 @@ let count = 0;
 // Loop of mole animation
 function animateMoles() {
         setTimeout(function(){
-            let rand = Math.floor(Math.random() * 6);
-            let isOut = moles[rand].classList.contains('mole-animate-up');
+            let rand = Math.floor(Math.random() * 9);
+            let isUp = moles[rand].classList.contains('mole-animate-up');
             // if random hole does not have mole showing
-            if (isOut === false){
+            if (isUp === false){
                 // animate mole to come up
                 moles[rand].classList.add('mole-animate-up');
                 setTimeout(function(){
-                    // after 4 seconds animate to go back down
+                    // after 2 seconds animate to go back down
                     moles[rand].classList.add('mole-animate-down');
                     setTimeout(function(){
-                        // and then remove the classes
+                        // then remove the classes
                         moles[rand].className = 'mole';
-                    }, 2001)
+                    }, 2200)
                 }, 2000)
             }
             animateMoles()
@@ -29,7 +29,9 @@ function animateMoles() {
 
 for (let hole of holes){
     hole.addEventListener('click', function(){
-        if (hole.children[2].classList.contains('mole-animate-up')){
+        let isUp = hole.children[2].classList.contains('mole-animate-up');
+        let isDown = hole.children[2].classList.contains('mole-animate-down');
+        if (isUp && isDown === false){
             hole.children[0].style.display = 'initial';
             hole.children[2].classList.add('mole-animate-down');
             setTimeout(function(){
