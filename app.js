@@ -3,6 +3,32 @@ const holes = document.querySelectorAll('.hole');
 const score = document.querySelector('#score')
 let count = 0;
 
+// countdown timer
+function startTimer(duration, display) {
+    var timer = duration, seconds;
+    setInterval(function () {
+        seconds = parseInt(timer % 60, 10);
+        seconds = seconds < 10 ? seconds : seconds;
+
+        display.textContent = seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var countdown = 45,
+    display = document.querySelector('#time');
+    startTimer(countdown, display);
+};
+
+setTimeout(function(){
+    alert(`your score is: ${count}`);
+    window.location.reload();
+}, 47000);
+
 // Loop of mole animation
 function animateMoles() {
         setTimeout(function(){
