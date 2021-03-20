@@ -64,9 +64,24 @@ h1 {
 
 #row-1 {
     margin-top: 100px;
-    z-index: 1;
 }
 
-#row-2 {
+#row-2 .hole .mole {
     z-index: 2;
+}
+
+#row-2 .hole .hole-bottom {
+    z-index: 3;
+}
+
+#row-3 .hole .mole {
+    z-index: 4;
+}
+
+#row-3 .hole .hole-bottom {
+    z-index: 5;
+}
+
+#row-3 .hole .pow {
+    z-index: 6;
 }
