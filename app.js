@@ -68,6 +68,11 @@ function animateMoles() {
         }, 300)
     }
 
+function playSound() {
+    let sound = document.getElementById("audio");
+    sound.play();
+    }
+
 // click event to 'Whack-a-Mole'
 
 for (let hole of holes){
@@ -82,6 +87,7 @@ for (let hole of holes){
             }, 200)
             count++;
             score.textContent = count;
+            playSound();
         }
     });
 }
