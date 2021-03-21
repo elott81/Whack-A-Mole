@@ -1,6 +1,9 @@
 const moles = document.querySelectorAll('.mole');
 const holes = document.querySelectorAll('.hole');
-const score = document.querySelector('#score')
+const score = document.querySelector('#score');
+const mainDisplay = document.querySelector('#main');
+const scorePage = document.querySelector('#scorePage');
+const scoreDisplay = document.querySelector('#scoreDisplay');
 let count = 0;
 
 // countdown timer
@@ -25,8 +28,10 @@ window.onload = function () {
 };
 
 setTimeout(function(){
-    alert(`your score is: ${count}`);
-    window.location.reload();
+    // Show Score after 45 seconds
+    mainDisplay.classList.add('hidePage');
+    scorePage.style.display = 'initial';
+    scoreDisplay.textContent = `${count}`;
 }, 47000);
 
 // Loop of mole animation

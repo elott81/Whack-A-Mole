@@ -10,12 +10,12 @@
     <title>Whack-A-Mole</title>
 </head>
 <body>
-    <div class="container mt-4">
-        <h1>Whack-A-Mole</h1>
+  <h1>Whack-A-Mole</h1>
+    <div class="container" id="main">
+      <div class="container mt-4">
         <h5>Score counter: <span id="score">0</span></h5>
         <h3 id="time">45</h3>
-    </div>
-    <div class="container">
+      </div>
         <div class="row" id="row-1">
           <div class="hole col-sm">
             <img class='pow' src="pics/pow.png" alt="pow">
@@ -76,6 +76,9 @@
             <img src="pics/hole.jpg" alt="hole">
           </div>
         </div>
+      </div>
+      <div class="container" id="scorePage">
+        <h2>You got a score of: <span id="scoreDisplay"> </span></h2>
       </div>
 </body>
 <script src="app.js"></script>
