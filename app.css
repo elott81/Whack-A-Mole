@@ -62,16 +62,15 @@ h1 {
     z-index: 2;
 }
 
+#main {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
 #scorePage {
-    display: none;
-}
-
-.showPage {
-    display: initial;
-}
-
-.hidePage {
-    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
 }
 
 #row-1 {

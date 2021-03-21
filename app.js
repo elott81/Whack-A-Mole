@@ -29,8 +29,11 @@ window.onload = function () {
 
 setTimeout(function(){
     // Show Score after 45 seconds
-    mainDisplay.classList.add('hidePage');
-    scorePage.style.display = 'initial';
+    mainDisplay.style.opacity = '0';
+    setTimeout(function(){
+        mainDisplay.style.display = 'none';
+        scorePage.style.opacity = '100';
+    }, 500);
     scoreDisplay.textContent = `${count}`;
 }, 47000);
 
