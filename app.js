@@ -4,6 +4,8 @@ const score = document.querySelector('#score');
 const mainDisplay = document.querySelector('#main');
 const scorePage = document.querySelector('#scorePage');
 const scoreDisplay = document.querySelector('#scoreDisplay');
+const btn = document.querySelector('#restart');
+const message = document.querySelector('#message');
 let count = 0;
 
 // countdown timer
@@ -29,6 +31,13 @@ window.onload = function () {
 
 setTimeout(function(){
     // Show Score after 45 seconds
+    if(count >= 40){
+        message.textContent = 'Well Done!'
+        scoreDisplay.classList.add('green');
+    } else {
+        message.textContent = 'Keep Practicing!'
+        scoreDisplay.classList.add('red');
+    }
     mainDisplay.style.opacity = '0';
     setTimeout(function(){
         mainDisplay.style.display = 'none';
@@ -76,5 +85,9 @@ for (let hole of holes){
         }
     });
 }
+
+btn.addEventListener('click', function(){
+    window.location.reload();
+})
 
 animateMoles();

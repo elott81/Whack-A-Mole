@@ -62,12 +62,21 @@ h1 {
     z-index: 2;
 }
 
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
 #main {
     transition-property: opacity;
     transition-duration: 0.5s;
 }
 
 #scorePage {
+    margin-top: 100px;
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.5s;
